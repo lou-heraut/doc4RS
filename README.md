@@ -3,6 +3,8 @@
 Documentation web avec équations mathématiques et références bibliographiques,
 générée avec MkDocs et exportable en PDF via pandoc.
 
+Site en ligne : https://louis-heraut.github.io/doc4RS/
+
 ---
 
 ## Prérequis système
@@ -62,17 +64,6 @@ make deploy
 ```
 
 Build le site et le publie en ligne en une seule commande.
-Le site sera accessible à `https://<votre-pseudo>.github.io/doc4RS`.
-
-> Avant la première publication, configurez votre dépôt GitHub :
-> ```bash
-> git init
-> git remote add origin https://github.com/<votre-pseudo>/doc4RS.git
-> git add .
-> git commit -m "initial commit"
-> git push -u origin main
-> ```
-> Puis dans Settings > Pages du dépôt, sélectionnez la branche `gh-pages` comme source.
 
 ### Générer le PDF
 
@@ -156,3 +147,40 @@ nav:
   - Diffusion de Fick: diffusion.md
   - Ma nouvelle page: ma-page.md
 ```
+
+---
+
+## Configurer GitHub Pages (première fois)
+
+### 1. Pousser le projet sur GitHub
+
+```bash
+git init
+git remote add origin https://github.com/<votre-pseudo>/doc4RS.git
+git add .
+git commit -m "initial commit"
+git push -u origin main
+```
+
+### 2. Autoriser GitHub Actions à écrire sur le dépôt
+
+Dans votre dépôt GitHub : **Settings > Actions > General**,
+faites défiler jusqu'à **Workflow permissions** et sélectionnez
+**Read and write permissions**, puis sauvegardez.
+
+### 3. Premier déploiement
+
+```bash
+make deploy
+```
+
+### 4. Activer GitHub Pages
+
+Dans votre dépôt GitHub : **Settings > Pages**,
+sélectionnez la branche `gh-pages` comme source et sauvegardez.
+
+Le site est accessible à `https://<votre-pseudo>.github.io/doc4RS/`
+en moins d'une minute.
+
+> Les déploiements suivants se font simplement avec `make deploy`,
+> sans avoir à retoucher les paramètres GitHub.
