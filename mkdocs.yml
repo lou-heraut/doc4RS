@@ -1,0 +1,22 @@
+site_name: Ma Documentation
+
+theme:
+  name: material
+
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.superfences
+  - footnotes
+  - attr_list
+
+plugins:
+  - search
+  - bibtex:
+      bib_file: "docs/refs.bib"
+      csl_file: "docs/apa.csl"
+      bib_by_default: false
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
