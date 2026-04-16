@@ -10,6 +10,7 @@ help:
 	@echo "  make serve     lance le serveur local (hot reload)"
 	@echo "  make build     build statique du site web"
 	@echo "  make pdf       génère le PDF via pandoc"
+	@echo "  make deploy    publie le site sur GitHub Pages"
 	@echo "  make clean     supprime site/"
 	@echo ""
 
@@ -48,6 +49,9 @@ pdf:
 		-o site/documentation.pdf
 	@echo ""
 	@echo "PDF généré : site/documentation.pdf"
+
+deploy:
+	$(MKDOCS) gh-deploy
 
 clean:
 	rm -rf site/

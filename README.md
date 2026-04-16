@@ -1,4 +1,4 @@
-# Ma Documentation Scientifique
+# doc4RS — Doc for Research Software
 
 Documentation web avec équations mathématiques et références bibliographiques,
 générée avec MkDocs et exportable en PDF via pandoc.
@@ -55,6 +55,25 @@ make serve
 Ouvre un serveur local à l'adresse `http://127.0.0.1:8000`.
 La page se recharge automatiquement à chaque sauvegarde de fichier.
 
+### Publier sur GitHub Pages
+
+```bash
+make deploy
+```
+
+Build le site et le publie en ligne en une seule commande.
+Le site sera accessible à `https://<votre-pseudo>.github.io/doc4RS`.
+
+> Avant la première publication, configurez votre dépôt GitHub :
+> ```bash
+> git init
+> git remote add origin https://github.com/<votre-pseudo>/doc4RS.git
+> git add .
+> git commit -m "initial commit"
+> git push -u origin main
+> ```
+> Puis dans Settings > Pages du dépôt, sélectionnez la branche `gh-pages` comme source.
+
 ### Générer le PDF
 
 ```bash
@@ -65,14 +84,13 @@ Le PDF est créé dans `site/documentation.pdf`.
 Les équations mathématiques et les références bibliographiques
 sont correctement rendues.
 
-### Construire le site web statique
+### Construire le site web statique sans publier
 
 ```bash
 make build
 ```
 
 Les fichiers HTML sont générés dans le dossier `site/`.
-Ils peuvent être déposés sur n'importe quel hébergeur web.
 
 ### Nettoyer les fichiers générés
 
@@ -87,7 +105,7 @@ Supprime le dossier `site/`. Utile pour repartir d'un build propre.
 ## Structure du projet
 
 ```
-mon-projet/
+doc4RS/
 ├── Makefile               # toutes les commandes
 ├── mkdocs.yml             # configuration du site
 ├── README.md              # ce fichier
@@ -138,33 +156,3 @@ nav:
   - Diffusion de Fick: diffusion.md
   - Ma nouvelle page: ma-page.md
 ```
-
----
-
-## Publier sur GitHub Pages
-
-Poussez votre projet sur GitHub, puis ajoutez ce fichier
-`.github/workflows/deploy.yml` :
-
-```yaml
-name: Deploy
-
-on:
-  push:
-    branches:
-      - main
-
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.x'
-      - run: pip install mkdocs mkdocs-material mkdocs-bibtex
-      - run: mkdocs gh-deploy --force
-```
-
-Le site sera accessible à l'adresse :
-`https://<votre-pseudo-github>.github.io/<nom-du-repo>`
