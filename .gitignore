@@ -9,3 +9,5 @@ tmp
 results
 figures
 *.Rdata
+site/
+.python_env
