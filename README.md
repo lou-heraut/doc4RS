@@ -1,5 +1,11 @@
 # doc4RS — Doc for Research Software
 
+<!-- badges: start -->
+[![MADE WITH AI](https://raw.githubusercontent.com/louis-heraut/ai-label-badge/main/ai-label_badge-made-with-ai.svg)](https://ai-label.org/)
+[![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-green)](https://lifecycle.r-lib.org/articles/stages.html)
+![](https://img.shields.io/github/last-commit/louis-heraut/doc4RS)
+<!-- badges: end -->
+
 Documentation web avec équations mathématiques et références bibliographiques,
 générée avec MkDocs et exportable en PDF via pandoc.
 
