@@ -1,15 +1,15 @@
 # doc4RS — Doc for Research Software
 
 <!-- badges: start -->
-[![MADE WITH AI](https://raw.githubusercontent.com/louis-heraut/ai-label-badge/main/ai-label_badge-made-with-ai.svg)](https://ai-label.org/)
+[![MADE WITH AI](https://raw.githubusercontent.com/lou-heraut/ai-label-badge/main/ai-label_badge-made-with-ai.svg)](https://ai-label.org/)
 [![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-green)](https://lifecycle.r-lib.org/articles/stages.html)
-![](https://img.shields.io/github/last-commit/louis-heraut/doc4RS)
+![](https://img.shields.io/github/last-commit/lou-heraut/doc4RS)
 <!-- badges: end -->
 
 Documentation web avec équations mathématiques et références bibliographiques,
 générée avec MkDocs et exportable en PDF via pandoc.
 
-Site en ligne : https://louis-heraut.github.io/doc4RS/
+Site en ligne : https://lou-heraut.github.io/doc4RS/
 
 ---
 
